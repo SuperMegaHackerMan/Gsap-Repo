@@ -18,6 +18,8 @@ const animation = gsap.to(".box", {
   duration: 5,
 });
 
+/*play runs the animation configurations , 
+resume continues the animation depending on its direction */
 play.addEventListener("click", () => {
   animation.play();
 });
