@@ -41,6 +41,14 @@ fab.addEventListener("click", () => {
     });
   } else {
     children.forEach((child) => {
+      gsap.to(child, {
+        x: 0,
+        y: 0,
+        duration: 0.5,
+        scale: 0.2,
+        opacity: 0,
+        // ease: "expo.out",
+      });
       // 🔜 Collapse animation will go here
     });
   }
