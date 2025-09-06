@@ -1,4 +1,5 @@
 // Select the "Repeat" button
+import gsap from "gsap";
 const repeat = document.querySelector(".repeat");
 
 // Sample data for each day of the week
@@ -46,9 +47,12 @@ function renderChart() {
     wrapper.appendChild(label);
     chart.appendChild(wrapper);
 
-    // gsap.to(bar, {
-    //   scaleY: 1,
-    // });
+    gsap.to(bar, {
+      scaleY: 1,
+      duration: 3,
+      ease: "elastic.out(1, 1.25)",
+      delay: i * 0.3,
+    });
   });
 }
 
@@ -60,3 +64,12 @@ repeat.addEventListener("click", () => {
 
 // Initial render
 renderChart();
+
+const bars = () => document.querySelectorAll(".bar");
+bars().forEach((bar, i) => {
+  gsap.to(bar, {
+    scaleY: 1,
+    duration: 1,
+    ease: "elastic.out(1, 0.3)",
+  });
+});
