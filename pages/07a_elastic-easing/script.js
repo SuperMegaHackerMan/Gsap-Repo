@@ -46,7 +46,9 @@ function renderChart() {
     wrapper.appendChild(label);
     chart.appendChild(wrapper);
 
-    // 👇 This is where GSAP animation will go later
+    // gsap.to(bar, {
+    //   scaleY: 1,
+    // });
   });
 }
 
